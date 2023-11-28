@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brayan Cuetia</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Audiovisual.jpg'); /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+           
+           
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end; /* Alinea los elementos en el extremo derecho */
+            background-color: #9c0303;
+            padding: 0.5em;
+        }
+
+        nav a {
+            margin-left: 10px; /* Ajusta el espacio entre los enlaces si es necesario */
+            color: #fff;
+            text-decoration: none;
+        
+            
+        }
+
+        section {
+            padding: 2em;
+            color: #0f0e0e; /* Cambia el color del texto para que sea legible en la imagen de fondo */
+        }
+
+        footer {
+           
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+        }
+        footer h3 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produccion Audiovisual</h1>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#portafolio">Portafolio</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>¡Hola! Soy BRAYAN CUETIA</h2>
+        <p>Bienvenido a mi sitio web. Soy un joven apasionado del mundo audiovisual.</p>
+    </section>
+
+    <section id="portafolio">
+        <h2>Portafolio</h2>
+        <!-- Aquí puedes agregar proyectos o trabajos anteriores -->
+        <p>Proyecto 1: [Descripción del proyecto]</p>
+        <p>Proyecto 2: [Descripción del proyecto]</p>
+    </section>
+
+    <footer>
+        <h3>Conéctate conmigo en redes sociales:</h3>
+        <!-- Agrega tus enlaces a redes sociales aquí -->
+        <a href="https://www.instagram.com/brcuetia/">Instagram</a>
+        <a href="https://www.facebook.com/brcuetia/">Facebook</a>
+        <a href="https://www.tiktok.com/@brcuetia/">Tiktok</a>
+        <a href="https://www.youtube.com/@brcuetia/">Youtube</a>
+        <p>@2023 Derechos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Función para mostrar u ocultar secciones
+            function mostrarOcultarSeccion(id) {
+                document.querySelectorAll("section").forEach(function (section) {
+                    section.style.display = "none";
+                });
+
+                document.getElementById(id).style.display = "block";
+            }
+
+            // Mostrar la sección de inicio al cargar la página
+            mostrarOcultarSeccion("inicio");
+
+            // Manejar clic en enlaces de navegación
+            document.querySelectorAll("nav a").forEach(function (enlace) {
+                enlace.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    var seccionId = this.getAttribute("href").substring(1);
+                    mostrarOcultarSeccion(seccionId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
