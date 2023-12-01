@@ -3,113 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Perfil.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Brayan Cuetia</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('Audiovisual.jpg'); /* Ruta de tu imagen de fondo */
+            overflow: hidden;
+        }
+
+        #fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 160%;
+            background-image: url('Tecnologia.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la ruta de tu imagen de fondo */
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
         }
 
-        header {
-           
-           
-            text-align: center;
+        #titulo {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            color: white;
+            font-size: 70px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
         }
 
-        nav {
+        #redes-sociales {
+            position: absolute;
+            top: 40px;
+            right: 20px;
             display: flex;
-            justify-content: flex-end; /* Alinea los elementos en el extremo derecho */
-            background-color: #9c0303;
-            padding: 0.5em;
-        }
-
-        nav a {
-            margin-left: 10px; /* Ajusta el espacio entre los enlaces si es necesario */
-            color: #fff;
-            text-decoration: none;
-        
+            align-items: center;
             
         }
 
-        section {
-            padding: 2em;
-            color: #0f0e0e; /* Cambia el color del texto para que sea legible en la imagen de fondo */
+        #redes-sociales a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 25px; 
+            font-weight: bold; 
+            background-color: black; 
+            padding: 10px; 
+            border-radius: 5px;
         }
 
-        footer {
-           
-            text-align: center;
-            padding: 1em;
+        #pie-de-pagina {
             position: fixed;
             bottom: 0;
+            left: 0;
             width: 100%;
-
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
+            font-size: 13px;
         }
-        footer h3 {
-            color: #fff;
-        }
+         
     </style>
 </head>
 <body>
-    <header>
-        <h1>Produccion Audiovisual</h1>
-    </header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#portafolio">Portafolio</a>
-    </nav>
+    <div id="fondo"></div>
 
-    <section id="inicio">
-        <h2>¡Hola! Soy BRAYAN CUETIA</h2>
-        <p>Bienvenido a mi sitio web. Soy un joven apasionado del mundo audiovisual.</p>
-    </section>
+    <div id="titulo" onclick="cambiarColorTitulo()">BRAYAN CUETIA</div>
 
-    <section id="portafolio">
-        <h2>Portafolio</h2>
-        <!-- Aquí puedes agregar proyectos o trabajos anteriores -->
-        <p>Proyecto 1: [Descripción del proyecto]</p>
-        <p>Proyecto 2: [Descripción del proyecto]</p>
-    </section>
+    <div id="redes-sociales">
+        <a href="https://www.instagram.com/briyazn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/briyazn" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@brcuetia" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@briyazn" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  
 
-    <footer>
-        <h3>Conéctate conmigo en redes sociales:</h3>
-        <!-- Agrega tus enlaces a redes sociales aquí -->
-        <a href="https://www.instagram.com/brcuetia/">Instagram</a>
-        <a href="https://www.facebook.com/brcuetia/">Facebook</a>
-        <a href="https://www.tiktok.com/@brcuetia/">Tiktok</a>
-        <a href="https://www.youtube.com/@brcuetia/">Youtube</a>
-        <p>@2023 Derechos reservados</p>
-    </footer>
+    <div id="pie-de-pagina">@ 2023 BRAYAN CUETIA</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Función para mostrar u ocultar secciones
-            function mostrarOcultarSeccion(id) {
-                document.querySelectorAll("section").forEach(function (section) {
-                    section.style.display = "none";
-                });
+        // Función para cambiar el color del título al hacer clic
+        function cambiarColorTitulo() {
+            var titulo = document.getElementById("titulo");
+            titulo.style.color = getRandomColor();
+        }
 
-                document.getElementById(id).style.display = "block";
+        // Función para generar un color aleatorio en formato hexadecimal
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
             }
-
-            // Mostrar la sección de inicio al cargar la página
-            mostrarOcultarSeccion("inicio");
-
-            // Manejar clic en enlaces de navegación
-            document.querySelectorAll("nav a").forEach(function (enlace) {
-                enlace.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    var seccionId = this.getAttribute("href").substring(1);
-                    mostrarOcultarSeccion(seccionId);
-                });
-            });
-        });
+            return color;
+        }
     </script>
+
 </body>
 </html>
