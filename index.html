@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Perfil.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Brayan Cuetia</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 160%;
+            background-image: url('Tecnologia.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #titulo {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            color: white;
+            font-size: 70px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
+        }
+
+        #redes-sociales {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #redes-sociales a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 25px; 
+            font-weight: bold; 
+            background-color: black; 
+            padding: 10px; 
+            border-radius: 5px;
+        }
+
+        #pie-de-pagina {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
+            font-size: 13px;
+        }
+         
+    </style>
+</head>
+<body>
+
+    <div id="fondo"></div>
+
+    <div id="titulo" onclick="cambiarColorTitulo()">BRAYAN CUETIA</div>
+
+    <div id="redes-sociales">
+        <a href="https://www.instagram.com/briyazn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/briyazn" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@brcuetia" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@briyazn" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  
+
+    <div id="pie-de-pagina">@ 2023 BRAYAN CUETIA</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+    <script>
+        // Función para cambiar el color del título al hacer clic
+        function cambiarColorTitulo() {
+            var titulo = document.getElementById("titulo");
+            titulo.style.color = getRandomColor();
+        }
+
+        // Función para generar un color aleatorio en formato hexadecimal
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>
