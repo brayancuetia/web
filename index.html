@@ -2,10 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Perfil.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Brayan Cuetia</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, nimimum-scale=1.0">
+    <meta name="description" content="Sitio web de Brayan Cuetia">
+  	<meta name="keywords" content="Brayan, Cuetia, Brayan Cuetia">
+      <link rel="icon" href="Perfil.jpeg" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <title>Brayan Cuetia</title>
+    
+    
+</head>
+<body>
+    <div class="contenedor">
+    <div id="fondo"></div>
+
+    <div id="titulo" onclick="cambiarColorTitulo()">BRAYAN CUETIA</div>
+
+    <div id="redes-sociales">
+        <a href="https://www.instagram.com/briyazn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/briyazn" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@brcuetia" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@briyazn" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  
+
+    <div id="pie-de-pagina">@ 2023 BRAYAN CUETIA</div>
     <style>
         body {
             margin: 0;
@@ -25,20 +45,22 @@
         }
 
         #titulo {
+            
             position: absolute;
-            top: 20px;
-            left: 100px;
+            top: 40px;
+            left: 18px;
             color: white;
-            font-size: 70px;
+            font-size: 40px;
             cursor: pointer;
             font-weight: bold;
             font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
+            
         }
 
         #redes-sociales {
             position: absolute;
-            top: 40px;
-            right: 20px;
+            top: 140px;
+            right: 140px;
             display: flex;
             align-items: center;
             
@@ -48,7 +70,7 @@
             margin-left: 10px;
             text-decoration: none;
             color: white;
-            font-size: 25px; 
+            font-size: 15px; 
             font-weight: bold; 
             background-color: black; 
             padding: 10px; 
@@ -65,30 +87,32 @@
             padding: 5px;
             font-weight: bold;
             font-family: 'Noto Serif', serif; /* Cambia 'Otra Fuente' por la fuente que desees para el pie de página */
-            font-size: 13px;
+            font-size: 8px;
         }
+
+        .contenedor {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        @media screen and (max-width: 600px) {
+            header {
+                padding: 30px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            header {
+                padding: 20px;
+            }
+        }
+    
          
     </style>
-</head>
-<body>
 
-    <div id="fondo"></div>
 
-    <div id="titulo" onclick="cambiarColorTitulo()">BRAYAN CUETIA</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
-    <div id="redes-sociales">
-        <a href="https://www.instagram.com/briyazn" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/briyazn" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.tiktok.com/@brcuetia" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.youtube.com/@briyazn" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  
-
-    <div id="pie-de-pagina">@ 2023 BRAYAN CUETIA</div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-
-    <script>
+<script>
         // Función para cambiar el color del título al hacer clic
         function cambiarColorTitulo() {
             var titulo = document.getElementById("titulo");
@@ -106,5 +130,8 @@
         }
     </script>
 
+</div>
+
+    
 </body>
 </html>
